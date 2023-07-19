@@ -6,7 +6,7 @@ const resolver = new Resolver();
 const getUniqueId = () => '_' + Math.random().toString(36).substr(2, 9);
 
 const getListKeyFromContext = (context) => {
-  console.log(context);
+  // console.log("context2: ", context);
   const { localId: id } = context;
   return id.split('/')[id.split('/').length - 1];
 }
@@ -15,8 +15,18 @@ const getAll = async (listId) => {
   return await storage.get(listId) || [];
 }
 
+resolver.define('debug', ({ payload }) => {
+  console.log("data: ", payload.data);
+})
+
 resolver.define('get-all', ({ context }) => {
   return getAll(getListKeyFromContext(context));
+});
+
+resolver.define('get-issueId', ({ context }) => {
+  const issueId = context?.extension?.issue?.id;
+  // console.log("issueId: ", typeof(issueId));
+  return [issueId];
 });
 
 resolver.define('create', async ({ payload, context }) => {

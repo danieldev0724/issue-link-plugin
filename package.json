@@ -1,9 +1,12 @@
 {
-  "name": "custom-ui-template",
+  "name": "threaded-comments",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "deploy": "npm run build --prefix ./static/comment && forge deploy && forge install --upgrade --confirm-scopes"
+  },
   "devDependencies": {
     "eslint": "^8.11.0",
     "eslint-plugin-react-hooks": "^2.1.2"

@@ -1,27 +1,36 @@
-# Forge Todo App
+# Threaded Comments App
 
-This project contains a Forge custom UI app written in React that displays in a Jira issue panel. 
+This project contains a Forge Threaded Comments app written in React that displays in a Jira issue panel. 
 
 See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
 
-![Todo app for Jira](./example.gif "Todo app for Jira")
+![Threaded App for Jira](./example.gif "Todo app for Jira")
 
 ## Requirements
 
 See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/) for instructions to get set up.
 
-## Quick start
+## Quick Start
 
 ### Register the app
+- Set Forge Environment:
+```
+read FORGE_EMAIL
+# Enter email
+read -s FORGE_API_TOKEN
+# Enter API token (will not be displayed)
+export FORGE_EMAIL FORGE_API_TOKEN
+```
 - Register the app by running:
 ```
 forge register
 ```
 
+
 ### Frontend
 - Change into the frontend directory by running:
 ```
-cd ./static/spa
+cd ./static/comment
 ```
 
 - Install your frontend dependencies by running:
@@ -52,11 +61,25 @@ forge deploy
 forge install
 ```
 
-## Support
-See [Get help](https://developer.atlassian.com/platform/forge/get-help/) for how to get help and provide feedback.
+### Alternative
+- Change into the frontend directory by running:
+```
+cd ./static/comment
+```
 
-## Contributions
-Contributions are welcome! Please see CONTRIBUTING.md for details.
+- Install your frontend dependencies by running:
+```
+npm install
+```
 
-## License
-Copyright (c) 2020 Atlassian and others. Apache 2.0 licensed, see LICENSE file.
+ensure you have navigated back to the root of the repository.
+
+- Install the forge dependencies by running:
+```
+npm install
+```
+
+- Build, deploy and install your app by running:
+```
+npm run deploy
+```
