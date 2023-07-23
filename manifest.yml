@@ -1,12 +1,12 @@
 modules:
   jira:issuePanel:
-    - key: todo-panel
+    - key: issue-link-panel
       resource: main
       resolver:
         function: resolver
-      title: Threaded Comments
+      title: Link Issue
       viewportSize: medium
-      tooltip: Add a threaded comment
+      tooltip: Link a issue
       icon: https://developer.atlassian.com/platform/forge/images/issue-panel-icon.svg
   function:
     - key: resolver
@@ -22,5 +22,3 @@ permissions:
   content:
     styles:
       - unsafe-inline
-app:
-  id: ari:cloud:ecosystem::app/fa588f28-2f9f-4c89-8ffa-380722591243

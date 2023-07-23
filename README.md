@@ -1,10 +1,8 @@
-# Threaded Comments App
+# Issue Link App
 
-This project contains a Forge Threaded Comments app written in React that displays in a Jira issue panel. 
+This project contains a Forge Issue Link app written in React that displays in a Jira issue panel. 
 
 See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
-
-![Threaded App for Jira](./example.gif "Todo app for Jira")
 
 ## Requirements
 
